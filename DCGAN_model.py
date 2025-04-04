@@ -20,8 +20,7 @@ def get_data(lbl):
     y_train=[]
     path = os.path.join(data_dir, lbl)
     for img in os.listdir(path):
-        if(img=='desktop.ini'):
-            continue
+
         try:
             img_arr = cv2.imread(os.path.join(path, img),cv2.IMREAD_GRAYSCALE)
             resized_arr = cv2.resize(img_arr, (img_size, img_size))

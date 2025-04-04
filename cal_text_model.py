@@ -20,10 +20,6 @@ def get_data(data_dir):
         class_num = classes.index(label)
         for img in os.listdir(path):
 
-            if (img == 'desktop.ini'):
-                continue
-            # if (count==300):
-            #     break
             try:
                 img_arr = cv2.imread(os.path.join(path, img), cv2.IMREAD_GRAYSCALE)
                 # (thresh, im_bw)=cv2.threshold(img_arr,128,255,cv2.THRESH_BINARY|cv2.THRESH_OTSU)
